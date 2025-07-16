@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="img/cookie.png" type="image/x-icon">
+  <title>Dulce Bocado - Repostería & Catering</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="menu-toggle" id="toggle">☰</div>
+      <ul class="nav-links" id="nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="reposteriaPasteleria.html">Repostería & Pastelería</a></li>
+        <li><a href="catering.html">Catering</a></li>
+      </ul>
+    </nav>
+    <h1>Dulce Bocado🍪</h1>
+  </header>
+
+  <section class="hero">
+    <h2>Bienvenidos a Dulce Bocado</h2>
+    <p>Delicias dulces y saladas para cada ocasión. ¡Déjate tentar!</p>
+    <img src="img/cookie-logo.png" alt="Logo Dulce Bocado" />
+  </section>
+
+  <section class="carrusel">
+    <div class="slider">
+      <img src="img/slide1.jpg" class="slide" />
+      <img src="img/slide2.jpg" class="slide" />
+      <img src="img/slide3.jpg" class="slide" />
+    </div>
+  </section>
+
+  <section class="contacto">
+    <h2>Contáctanos</h2>
+    <form onsubmit="enviarWhatsApp(event)">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" name="correo" required />
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Dulce Bocado. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('toggle');
+    const nav = document.getElementById('nav');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+
+    function enviarWhatsApp(event) {
+      event.preventDefault();
+      const nombre = document.getElementById('nombre').value;
+      const correo = document.getElementById('correo').value;
+      const mensaje = document.getElementById('mensaje').value;
+
+      const texto = `Hola, soy ${nombre} (Email: ${correo})\n\n${mensaje}`;
+      const numero = "573013150021"; // Número de WhatsApp real
+
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>

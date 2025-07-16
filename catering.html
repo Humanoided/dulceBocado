@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catering | Dulce Bocado</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="menu-toggle" id="toggle">☰</div>
+      <ul class="nav-links" id="nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="reposteriaPasteleria.html">Repostería & Pastelería</a></li>
+        <li><a href="catering.html">Catering</a></li>
+      </ul>
+    </nav>
+    <h1>Dulce Bocado🍪</h1>
+  </header>
+
+  <main class="catalogo">
+   <section>
+  <h2>Menú Navideño</h2>
+  <div class="productos">
+    <article class="producto">
+      <img src="img/navidena-bandeja.jpg" alt="Bandeja navideña" />
+      <h3>Bandeja Navideña</h3>
+      <p>Lechona, ensalada rusa, buñuelos, natilla y más.</p>
+      <a class="btn-wsp" href="https://wa.me/573013150021?text=Hola%2C%20quiero%20más%20información%20sobre%20la%20Bandeja%20Navideña" target="_blank">Pedir por WhatsApp</a>
+    </article>
+    <article class="producto">
+      <img src="img/galletas-navidad.jpg" alt="Galletas navideñas" />
+      <h3>Galletas decoradas</h3>
+      <p>Temáticas navideñas con glaseado artesanal.</p>
+      <a class="btn-wsp" href="https://wa.me/573013150021?text=Hola%2C%20quiero%20más%20información%20sobre%20las%20Galletas%20decoradas" target="_blank">Pedir por WhatsApp</a>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2>Amor y Amistad</h2>
+  <div class="productos">
+    <article class="producto">
+      <img src="img/picnic-romantico.jpg" alt="Picnic romántico" />
+      <h3>Picnic Romántico</h3>
+      <p>Incluye tabla de quesos, vino, dulces y decoración temática.</p>
+      <a class="btn-wsp" href="https://wa.me/573013150021?text=Hola%2C%20quiero%20más%20información%20sobre%20el%20Picnic%20Romántico" target="_blank">Pedir por WhatsApp</a>
+    </article>
+    <article class="producto">
+      <img src="img/caja-sorpresa.jpg" alt="Caja sorpresa" />
+      <h3>Caja Sorpresa</h3>
+      <p>Dulces, mensajes personalizados y detalles románticos.</p>
+      <a class="btn-wsp" href="https://wa.me/573013150021?text=Hola%2C%20quiero%20más%20información%20sobre%20la%20Caja%20Sorpresa" target="_blank">Pedir por WhatsApp</a>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2>Atención de Eventos y Catering</h2>
+  <div class="productos">
+    <article class="producto">
+      <img src="img/catering-empresarial.jpg" alt="Catering empresarial" />
+      <h3>Catering Empresarial</h3>
+      <p>Buffets, coffee breaks, refrigerios y servicio de meseros.</p>
+      <a class="btn-wsp" href="https://wa.me/573013150021?text=Hola%2C%20quiero%20más%20información%20sobre%20el%20Catering%20Empresarial" target="_blank">Pedir por WhatsApp</a>
+    </article>
+    <article class="producto">
+      <img src="img/desayuno-evento.jpg" alt="Desayuno para eventos" />
+      <h3>Desayunos para eventos</h3>
+      <p>Menús variados: saludables, tradicionales o personalizados.</p>
+      <a class="btn-wsp" href="https://wa.me/573013150021?text=Hola%2C%20quiero%20más%20información%20sobre%20los%20Desayunos%20para%20eventos" target="_blank">Pedir por WhatsApp</a>
+    </article>
+  </div>
+</section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Dulce Bocado. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('toggle');
+    const nav = document.getElementById('nav');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

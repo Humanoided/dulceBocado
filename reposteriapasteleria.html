@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Repostería y Pastelería | Dulce Bocado</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="menu-toggle" id="toggle">☰</div>
+      <ul class="nav-links" id="nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="reposteriaPasteleria.html">Repostería & Pastelería</a></li>
+        <li><a href="catering.html">Catering</a></li>
+      </ul>
+    </nav>
+    <h1>Dulce Bocado🍪</h1>
+  </header>
+
+  <main class="catalogo">
+    <section>
+      <h2>Alfajores & Cupcakes</h2>
+      <div class="productos">
+        <article class="producto">
+          <img src="img/alfajor-chocolate.jpg" alt="Alfajor de chocolate" />
+          <h3>Alfajor de chocolate</h3>
+          <p>Relleno de arequipe, cubierto con chocolate amargo.</p>
+          <a class="btn-wsp" href="https://wa.me/573013150021?text=Hola%2C%20quiero%20más%20información%20sobre%20el%20Alfajor%20de%20chocolate" target="_blank">Pedir por WhatsApp</a>
+        </article>
+        <article class="producto">
+          <img src="img/cupcake-vainilla.jpg" alt="Cupcake de vainilla" />
+          <h3>Cupcake de vainilla</h3>
+          <p>Esponjoso con crema de mantequilla sabor fresa.</p>
+          <a class="btn-wsp" href="https://wa.me/573013150021?text=Hola%2C%20quiero%20más%20información%20sobre%20el%20Cupcake%20de%20vainilla" target="_blank">Pedir por WhatsApp</a>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Tortas Temáticas</h2>
+      <div class="productos">
+        <article class="producto">
+          <img src="img/torta-unicornio.jpg" alt="Torta temática unicornio" />
+          <h3>Torta unicornio</h3>
+          <p>Bizcochuelo suave decorado con crema y colores pastel.</p>
+          <a class="btn-wsp" href="https://wa.me/573013150021?text=Hola%2C%20quiero%20más%20información%20sobre%20la%20Torta%20unicornio" target="_blank">Pedir por WhatsApp</a>
+        </article>
+        <article class="producto">
+          <img src="img/torta-superheroes.jpg" alt="Torta de superhéroes" />
+          <h3>Torta de superhéroes</h3>
+          <p>Decorada con fondant y temática personalizada.</p>
+          <a class="btn-wsp" href="https://wa.me/573013150021?text=Hola%2C%20quiero%20más%20información%20sobre%20la%20Torta%20de%20superhéroes" target="_blank">Pedir por WhatsApp</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Dulce Bocado. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('toggle');
+    const nav = document.getElementById('nav');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
