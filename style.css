@@ -107,7 +107,7 @@ header {
 
 .slider {
   display: flex;
-  animation: slide 60s linear infinite;
+  animation: slide 45s linear infinite;
   width: calc(100% * 12);
 }
 
@@ -120,9 +120,21 @@ header {
 }
 
 @keyframes slide {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-91.66%); } /* (12 - 1) / 12 = 91.66% */
+  0%   { transform: translateX(0); }
+  8.33%  { transform: translateX(-100%); }
+  16.66% { transform: translateX(-200%); }
+  25%    { transform: translateX(-300%); }
+  33.33% { transform: translateX(-400%); }
+  41.66% { transform: translateX(-500%); }
+  50%    { transform: translateX(-600%); }
+  58.33% { transform: translateX(-700%); }
+  66.66% { transform: translateX(-800%); }
+  75%    { transform: translateX(-900%); }
+  83.33% { transform: translateX(-1000%); }
+  91.66% { transform: translateX(-1100%); }
+  100%   { transform: translateX(0); }
 }
+
 
 
 .catalogo {
