@@ -107,13 +107,12 @@ header {
 
 .slider {
   display: flex;
-  width: 1200%; /* 12 imágenes x 100% */
-  animation: slide 36s ease-in-out infinite;
+  width: 1200%;
+  animation: slide 48s ease-in-out infinite;
 }
 
-
 .slide {
-  width: 100%;
+  width: 8.3333%;
   height: 300px;
   object-fit: contain;
   background-color: rgb(116, 69, 0);
@@ -121,43 +120,44 @@ header {
 }
 
 @keyframes slide {
-  0%    { transform: translateX(0); }
-  6.5%  { transform: translateX(0); }
-  8.33% { transform: translateX(-100%); }
+  0%     { transform: translateX(0); }
+  6.5%   { transform: translateX(0); }
+  8.33%  { transform: translateX(-8.3333%); }
 
-  14.83% { transform: translateX(-100%); }
-  16.66% { transform: translateX(-200%); }
+  14.83% { transform: translateX(-8.3333%); }
+  16.66% { transform: translateX(-16.6666%); }
 
-  23.16% { transform: translateX(-200%); }
-  25%    { transform: translateX(-300%); }
+  23.16% { transform: translateX(-16.6666%); }
+  25%    { transform: translateX(-25%); }
 
-  31.5%  { transform: translateX(-300%); }
-  33.33% { transform: translateX(-400%); }
+  31.5%  { transform: translateX(-25%); }
+  33.33% { transform: translateX(-33.3333%); }
 
-  39.83% { transform: translateX(-400%); }
-  41.66% { transform: translateX(-500%); }
+  39.83% { transform: translateX(-33.3333%); }
+  41.66% { transform: translateX(-41.6666%); }
 
-  48.16% { transform: translateX(-500%); }
-  50%    { transform: translateX(-600%); }
+  48.16% { transform: translateX(-41.6666%); }
+  50%    { transform: translateX(-50%); }
 
-  56.5%  { transform: translateX(-600%); }
-  58.33% { transform: translateX(-700%); }
+  56.5%  { transform: translateX(-50%); }
+  58.33% { transform: translateX(-58.3333%); }
 
-  64.83% { transform: translateX(-700%); }
-  66.66% { transform: translateX(-800%); }
+  64.83% { transform: translateX(-58.3333%); }
+  66.66% { transform: translateX(-66.6666%); }
 
-  73.16% { transform: translateX(-800%); }
-  75%    { transform: translateX(-900%); }
+  73.16% { transform: translateX(-66.6666%); }
+  75%    { transform: translateX(-75%); }
 
-  81.5%  { transform: translateX(-900%); }
-  83.33% { transform: translateX(-1000%); }
+  81.5%  { transform: translateX(-75%); }
+  83.33% { transform: translateX(-83.3333%); }
 
-  89.83% { transform: translateX(-1000%); }
-  91.66% { transform: translateX(-1100%); }
+  89.83% { transform: translateX(-83.3333%); }
+  91.66% { transform: translateX(-91.6666%); }
 
-  98.16% { transform: translateX(-1100%); }
+  98.16% { transform: translateX(-91.6666%); }
   100%   { transform: translateX(0); }
 }
+
 
 
 
