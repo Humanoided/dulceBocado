@@ -108,7 +108,7 @@ header {
 .slider {
   display: flex;
   width: 1200%; /* 100% x 12 imágenes */
-  animation: slide 60s linear infinite;
+  animation: slide 80s linear infinite;
 }
 
 .slide {
