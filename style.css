@@ -82,6 +82,8 @@ header {
   }
 }
 
+/* ... resto de tu CSS sigue igual ... */
+
 
 .hero {
   text-align: center;
@@ -290,22 +292,10 @@ footer {
     display: block;
   }
 
-  .carrusel {
-    max-width: 100%;
-    height: 250px; /* un poco más compacto para móvil */
-    margin: 2rem auto;
-  }
-
-  .slider {
-    width: 100%; /* mantener igual que desktop */
-  }
-
   .slide {
-    height: 250px; /* altura ajustada */
-    width: 8.3333%; /* igual que desktop */
+    height: 250px; /* un poco más compacto en móvil si deseas */
   }
 }
-
 
 .quienes-somos,
 .mision-vision,
@@ -357,3 +347,51 @@ button:focus {
   outline-offset: 4px;
 }
 
+@media (max-width: 600px) {
+  .carrusel {
+    height: 200px;
+    max-width: 100%;
+  }
+
+  .slide {
+    height: 200px;
+    width: 100%; /* Cada imagen ocupa toda la pantalla */
+  }
+
+  .slider {
+    width: calc(12 * 100%); /* 12 imágenes */
+  }
+
+  @keyframes slide {
+    0%   { transform: translateX(0%); }
+    8%   { transform: translateX(0%); }
+    10%  { transform: translateX(-100%); }
+    
+    18%  { transform: translateX(-100%); }
+    20%  { transform: translateX(-200%); }
+
+    28%  { transform: translateX(-200%); }
+    30%  { transform: translateX(-300%); }
+
+    38%  { transform: translateX(-300%); }
+    40%  { transform: translateX(-400%); }
+
+    48%  { transform: translateX(-400%); }
+    50%  { transform: translateX(-500%); }
+
+    58%  { transform: translateX(-500%); }
+    60%  { transform: translateX(-600%); }
+
+    68%  { transform: translateX(-600%); }
+    70%  { transform: translateX(-700%); }
+
+    78%  { transform: translateX(-700%); }
+    80%  { transform: translateX(-800%); }
+
+    88%  { transform: translateX(-800%); }
+    90%  { transform: translateX(-900%); }
+
+    98%  { transform: translateX(-900%); }
+    100% { transform: translateX(0%); }
+  }
+}
