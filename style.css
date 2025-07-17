@@ -107,15 +107,15 @@ header {
 
 .slider {
   display: flex;
-  width: 1200%; /* 100% x 12 imágenes */
-  animation: slide 120s linear infinite;
+  width: 600%; /* 50% x 12 imágenes */
+  animation: slide 30s linear infinite;
 }
 
 .slide {
-  width: 100%;
+  width: 50%;
   height: 300px;
   object-fit: contain;
-  background-color: rgb(116, 69, 0); /* para que no se vea feo el fondo */
+  background-color: rgb(116, 69, 0);
   flex-shrink: 0;
 }
 
