@@ -1,347 +1,646 @@
 :root {
+
   --chocolate: #5D4037;
+
   --cream: #FBE9E7;
+
   --light-chocolate: #8D6E63;
+
 }
+
+
 
 body {
+
   font-family: 'Segoe UI', sans-serif;
+
   margin: 0;
+
   background-color: var(--cream);
+
   color: var(--chocolate);
+
   padding-left: 1rem;
+
   padding-right: 1rem;
+
 }
+
+
 
 header {
+
   background-color: var(--chocolate);
+
   color: white;
+
   padding: 1rem;
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   gap: 0.5rem;
+
 }
+
+
 
 /* Navbar base */
+
 .navbar {
+
   display: flex;
+
   justify-content: space-between;
+
   align-items: center;
+
   width: 100%;
+
   max-width: 1200px;
+
   background-color: var(--chocolate);
+
   padding: 0.5rem 1rem;
+
   position: relative; /* para el menú desplegable */
+
   color: white;
+
 }
+
+
 
 .menu-toggle {
+
   font-size: 2rem;
+
   cursor: pointer;
+
   color: white;
+
   display: none; /* oculto en desktop */
+
 }
+
+
 
 .nav-links {
+
   list-style: none;
+
   display: flex;
+
   gap: 1rem;
+
   margin: 0;
+
   padding: 0;
+
 }
+
+
 
 .nav-links li a {
-  color: white; 
+
+  color: white;
+
   text-decoration-thickness: 2px;
+
   font-weight: bold;
+
 }
 
+
+
 /* Responsive: Móvil */
+
 @media (max-width: 600px) {
+
   .menu-toggle {
+
     display: block;
+
   }
+
   .nav-links {
+
     flex-direction: column;
+
     background-color: var(--chocolate);
+
     position: absolute;
+
     top: 3.5rem; /* justo abajo del navbar */
+
     right: 0;
+
     width: 100%;
+
     max-height: 0;
+
     overflow: hidden;
+
     transition: max-height 0.3s ease-in-out;
+
   }
+
   .nav-links.active {
+
     max-height: 500px;
+
   }
+
   .nav-links li {
+
     padding: 0.8rem 0;
+
     text-align: center;
+
   }
+
 }
+
+
 
 /* ... resto de tu CSS sigue igual ... */
 
 
+
+
+
 .hero {
+
   text-align: center;
+
   padding: 2rem;
+
 }
+
+
 
 .hero img {
+
   width: 150px;
+
   margin-top: 1rem;
+
 }
+
+
 
 .carrusel {
+
   overflow: hidden;
+
   width: 100%;
+
   max-width: 900px;
+
   height: 300px;
+
   margin: 2rem auto;
+
   border-radius: 12px;
+
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
 }
+
+
 
 .slider {
+
   display: flex;
-  width: calc(100% * 12); /* 12 imágenes */
+
+  width: calc(12 * 100%); /* para movil */
+
   animation: slide 36s ease-in-out infinite;
+
 }
+
+
 
 .slide {
-  width: 100%; /* Cada imagen ocupa todo el carrusel */
+
+  width: 8.3333%;
+
   height: 300px;
+
   object-fit: contain;
+
+  background-color: rgb(116, 69, 0);
+
   flex-shrink: 0;
+
 }
+
+
 
 @keyframes slide {
-  0%    { transform: translateX(0%); }
-  8.33% { transform: translateX(0%); }
 
-  8.34% { transform: translateX(-100%); }
-  16.66%{ transform: translateX(-100%); }
+  0%, 7%   { transform: translateX(0); }
 
-  16.67%{ transform: translateX(-200%); }
-  25%   { transform: translateX(-200%); }
+  9%, 16%  { transform: translateX(-8.3333%); }
 
-  25.01%{ transform: translateX(-300%); }
-  33.33%{ transform: translateX(-300%); }
+  18%, 25% { transform: translateX(-16.6666%); }
 
-  33.34%{ transform: translateX(-400%); }
-  41.66%{ transform: translateX(-400%); }
+  27%, 34% { transform: translateX(-25%); }
 
-  41.67%{ transform: translateX(-500%); }
-  50%   { transform: translateX(-500%); }
+  36%, 43% { transform: translateX(-33.3333%); }
 
-  50.01%{ transform: translateX(-600%); }
-  58.33%{ transform: translateX(-600%); }
+  45%, 52% { transform: translateX(-41.6666%); }
 
-  58.34%{ transform: translateX(-700%); }
-  66.66%{ transform: translateX(-700%); }
+  54%, 61% { transform: translateX(-50%); }
 
-  66.67%{ transform: translateX(-800%); }
-  75%   { transform: translateX(-800%); }
+  63%, 70% { transform: translateX(-58.3333%); }
 
-  75.01%{ transform: translateX(-900%); }
-  83.33%{ transform: translateX(-900%); }
+  72%, 79% { transform: translateX(-66.6666%); }
 
-  83.34%{ transform: translateX(-1000%); }
-  91.66%{ transform: translateX(-1000%); }
+  81%, 88% { transform: translateX(-75%); }
 
-  91.67%{ transform: translateX(-1100%); }
-  100%  { transform: translateX(-1100%); }
+  90%, 97% { transform: translateX(-83.3333%); }
+
+  99%, 100%{ transform: translateX(-91.6666%); }
+
 }
+
+
+
+
+
 
 
 
 
 .catalogo {
+
   padding: 2rem;
+
   max-width: 1200px;
+
   margin: 0 auto;
+
 }
+
+
 
 .catalogo h2 {
+
   border-bottom: 2px solid var(--light-chocolate);
+
   padding-bottom: 0.5rem;
+
   margin-top: 2rem;
+
 }
+
+
 
 .productos {
+
   display: grid;
+
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
   gap: 1.5rem;
+
   margin-top: 1rem;
+
 }
+
+
 
 .producto {
+
   background-color: white;
+
   border: 1px solid var(--light-chocolate);
+
   border-radius: 12px;
+
   padding: 1rem;
+
   text-align: center;
+
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
   transition: transform 0.3s ease;
+
 }
+
+
 
 .producto:hover {
+
   transform: scale(1.03);
+
 }
+
+
 
 .producto img {
+
   width: 100%;
+
   max-height: 160px;
+
   object-fit: cover;
+
   border-radius: 8px;
+
   margin-bottom: 0.5rem;
+
 }
+
+
 
 .btn-wsp {
+
   display: inline-block;
+
   margin-top: 0.8rem;
+
   background-color: #d6b600;
+
   color: white;
+
   padding: 0.5rem 1rem;
+
   text-decoration: none;
+
   border-radius: 8px;
+
   font-weight: bold;
+
   transition: background-color 0.3s;
+
 }
+
+
 
 .btn-wsp:hover {
+
   background-color: #8f6900;
+
 }
+
+
 
 .btn-wsp::before {
+
   content: "📱 ";
+
 }
+
+
 
 .contacto {
+
   padding: 2rem;
+
   background-color: var(--light-chocolate);
+
   color: white;
+
   text-align: center;
+
 }
+
+
 
 .contacto form {
+
   max-width: 500px;
+
   margin: 0 auto;
+
   display: flex;
+
   flex-direction: column;
+
   gap: 1rem;
+
 }
+
+
 
 .contacto input,
+
 .contacto textarea {
+
   padding: 0.6rem;
+
   border: none;
+
   border-radius: 6px;
+
   font-size: 1rem;
+
 }
+
+
 
 .contacto button {
+
   background-color: var(--chocolate);
+
   color: white;
+
   padding: 0.6rem 1rem;
+
   border: none;
+
   border-radius: 6px;
+
   cursor: pointer;
+
   font-size: 1rem;
+
 }
+
+
 
 .contacto button:hover {
+
   background-color: #4e342e;
+
 }
+
+
 
 footer {
+
   background-color: var(--light-chocolate);
+
   text-align: center;
+
   padding: 1rem;
+
   margin-top: 2rem;
+
 }
+
+
 
 /* Responsive */
+
 @media (max-width: 600px) {
+
   nav ul {
+
     flex-direction: column;
+
   }
+
+
 
   .nav-links {
+
     flex-direction: column;
+
     width: 100%;
+
     background-color: var(--chocolate);
+
   }
+
+
 
   .menu-toggle {
+
     display: block;
+
   }
 
+
+
   .slide {
+
     height: 250px; /* un poco más compacto en móvil si deseas */
+
   }
+
 }
+
+
 
 .quienes-somos,
+
 .mision-vision,
+
 .valores {
+
   padding: 2rem;
+
   max-width: 1000px;
+
   margin: 0 auto;
+
   text-align: center;
+
 }
+
+
 
 .quienes-somos p,
+
 .mision-vision p {
+
   font-size: 1.1rem;
+
   line-height: 1.6;
+
   margin-top: 0.5rem;
+
 }
+
+
 
 .mision-vision {
+
   display: flex;
+
   flex-wrap: wrap;
+
   gap: 2rem;
+
   justify-content: center;
+
   margin-top: 2rem;
+
 }
+
+
 
 .mision-vision .mision,
+
 .mision-vision .vision {
+
   flex: 1 1 300px;
+
   background-color: rgb(255, 182, 46);
+
   padding: 1rem;
+
   border-radius: 10px;
+
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
 }
+
+
 
 .valores ul {
+
   list-style: none;
+
   padding: 0;
+
   margin-top: 1rem;
+
 }
+
+
 
 .valores li {
+
   font-size: 1.1rem;
+
   padding: 0.5rem 0;
+
 }
+
+
 
 a:focus,
+
 button:focus {
+
   outline: 2px dashed var(--light-chocolate);
+
   outline-offset: 4px;
+
 }
 
+
+
 @media (max-width: 600px) {
+
   .carrusel {
+
     height: 200px;
+
   }
 
   .slide {
+
+    width: 100%;
+
     height: 200px;
+
   }
 }
-
