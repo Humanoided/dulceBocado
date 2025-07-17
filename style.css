@@ -347,3 +347,56 @@ button:focus {
   outline-offset: 4px;
 }
 
+@media (max-width: 600px) {
+  .carrusel {
+    height: 200px;
+    max-width: 100%;
+  }
+
+  .slide {
+    height: 200px;
+    width: 100%; /* cada imagen ocupa toda la pantalla */
+  }
+
+  .slider {
+    width: calc(12 * 100%);
+    animation: slideMobile 36s ease-in-out infinite; /* cambia animación solo en móvil */
+  }
+}
+
+@keyframes slideMobile {
+  0%   { transform: translateX(0%); }
+  8%   { transform: translateX(0%); }
+
+  9%   { transform: translateX(-100%); }
+  17%  { transform: translateX(-100%); }
+
+  18%  { transform: translateX(-200%); }
+  26%  { transform: translateX(-200%); }
+
+  27%  { transform: translateX(-300%); }
+  35%  { transform: translateX(-300%); }
+
+  36%  { transform: translateX(-400%); }
+  44%  { transform: translateX(-400%); }
+
+  45%  { transform: translateX(-500%); }
+  53%  { transform: translateX(-500%); }
+
+  54%  { transform: translateX(-600%); }
+  62%  { transform: translateX(-600%); }
+
+  63%  { transform: translateX(-700%); }
+  71%  { transform: translateX(-700%); }
+
+  72%  { transform: translateX(-800%); }
+  80%  { transform: translateX(-800%); }
+
+  81%  { transform: translateX(-900%); }
+  89%  { transform: translateX(-900%); }
+
+  90%  { transform: translateX(-1000%); }
+  98%  { transform: translateX(-1000%); }
+
+  100% { transform: translateX(0); }
+}
