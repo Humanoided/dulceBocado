@@ -338,56 +338,10 @@ button:focus {
 @media (max-width: 600px) {
   .carrusel {
     height: 200px;
-    max-width: 100%;
   }
 
   .slide {
     height: 200px;
-    width: 100%;
-    flex-shrink: 0;
-  }
-
-  .slider {
-    display: flex;
-    width: 1200%; /* 12 imágenes x 100% */
-    animation: slideMobile 36s ease-in-out infinite;
   }
 }
 
-@keyframes slideMobile {
-  0%   { transform: translateX(0%); }
-  8.33%  { transform: translateX(0%); }
-
-  8.34%  { transform: translateX(-100%); }
-  16.66% { transform: translateX(-100%); }
-
-  16.67% { transform: translateX(-200%); }
-  25%    { transform: translateX(-200%); }
-
-  25.01% { transform: translateX(-300%); }
-  33.33% { transform: translateX(-300%); }
-
-  33.34% { transform: translateX(-400%); }
-  41.66% { transform: translateX(-400%); }
-
-  41.67% { transform: translateX(-500%); }
-  50%    { transform: translateX(-500%); }
-
-  50.01% { transform: translateX(-600%); }
-  58.33% { transform: translateX(-600%); }
-
-  58.34% { transform: translateX(-700%); }
-  66.66% { transform: translateX(-700%); }
-
-  66.67% { transform: translateX(-800%); }
-  75%    { transform: translateX(-800%); }
-
-  75.01% { transform: translateX(-900%); }
-  83.33% { transform: translateX(-900%); }
-
-  83.34% { transform: translateX(-1000%); }
-  91.66% { transform: translateX(-1000%); }
-
-  91.67% { transform: translateX(-1100%); }
-  100%   { transform: translateX(-1100%); }
-}
