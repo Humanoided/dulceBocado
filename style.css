@@ -107,31 +107,53 @@ header {
 
 .slider {
   display: flex;
-  width: calc(12 * 100%); /* para movil */
+  width: calc(100% * 12); /* 12 imágenes */
   animation: slide 36s ease-in-out infinite;
 }
 
 .slide {
-  width: 8.3333%;
+  width: 100%; /* Cada imagen ocupa todo el carrusel */
   height: 300px;
-  object-fit: contain;
-  background-color: rgb(116, 69, 0);
+  object-fit: cover;
   flex-shrink: 0;
 }
 
 @keyframes slide {
-  0%, 7%   { transform: translateX(0); }
-  9%, 16%  { transform: translateX(-8.3333%); }
-  18%, 25% { transform: translateX(-16.6666%); }
-  27%, 34% { transform: translateX(-25%); }
-  36%, 43% { transform: translateX(-33.3333%); }
-  45%, 52% { transform: translateX(-41.6666%); }
-  54%, 61% { transform: translateX(-50%); }
-  63%, 70% { transform: translateX(-58.3333%); }
-  72%, 79% { transform: translateX(-66.6666%); }
-  81%, 88% { transform: translateX(-75%); }
-  90%, 97% { transform: translateX(-83.3333%); }
-  99%, 100%{ transform: translateX(-91.6666%); }
+  0%    { transform: translateX(0%); }
+  8.33% { transform: translateX(0%); }
+
+  8.34% { transform: translateX(-100%); }
+  16.66%{ transform: translateX(-100%); }
+
+  16.67%{ transform: translateX(-200%); }
+  25%   { transform: translateX(-200%); }
+
+  25.01%{ transform: translateX(-300%); }
+  33.33%{ transform: translateX(-300%); }
+
+  33.34%{ transform: translateX(-400%); }
+  41.66%{ transform: translateX(-400%); }
+
+  41.67%{ transform: translateX(-500%); }
+  50%   { transform: translateX(-500%); }
+
+  50.01%{ transform: translateX(-600%); }
+  58.33%{ transform: translateX(-600%); }
+
+  58.34%{ transform: translateX(-700%); }
+  66.66%{ transform: translateX(-700%); }
+
+  66.67%{ transform: translateX(-800%); }
+  75%   { transform: translateX(-800%); }
+
+  75.01%{ transform: translateX(-900%); }
+  83.33%{ transform: translateX(-900%); }
+
+  83.34%{ transform: translateX(-1000%); }
+  91.66%{ transform: translateX(-1000%); }
+
+  91.67%{ transform: translateX(-1100%); }
+  100%  { transform: translateX(-1100%); }
 }
 
 
