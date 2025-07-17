@@ -346,3 +346,35 @@ button:focus {
   outline: 2px dashed var(--light-chocolate);
   outline-offset: 4px;
 }
+
+@media (max-width: 600px) {
+  .carrusel {
+    height: 250px;
+    max-width: 100%;
+  }
+
+  .slider {
+    width: 1200%; /* 12 slides x 100% cada uno */
+    animation: slide-mobile 36s ease-in-out infinite;
+  }
+
+  .slide {
+    width: 100%; /* cada slide ocupa todo el ancho visible */
+    height: 250px;
+  }
+
+  @keyframes slide-mobile {
+    0%, 7%    { transform: translateX(0); }
+    9%, 16%   { transform: translateX(-100%); }
+    18%, 25%  { transform: translateX(-200%); }
+    27%, 34%  { transform: translateX(-300%); }
+    36%, 43%  { transform: translateX(-400%); }
+    45%, 52%  { transform: translateX(-500%); }
+    54%, 61%  { transform: translateX(-600%); }
+    63%, 70%  { transform: translateX(-700%); }
+    72%, 79%  { transform: translateX(-800%); }
+    81%, 88%  { transform: translateX(-900%); }
+    90%, 97%  { transform: translateX(-1000%); }
+    99%, 100% { transform: translateX(-1100%); }
+  }
+}
