@@ -114,7 +114,8 @@ header {
 .slide {
   width: 100%;
   height: 300px;
-  object-fit: cover; /* mejor que contain para que no quede espacio */
+  object-fit: contain;
+  background-color: var(--cream); /* para que no se vea feo el fondo */
   flex-shrink: 0;
 }
 
