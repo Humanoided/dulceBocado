@@ -107,24 +107,20 @@ header {
 
 .slider {
   display: flex;
-  width: 400%; /* 4 imágenes */
-  animation: slide 12s infinite;
+  width: 1200%; /* 12 imágenes → 12 x 100% */
+  animation: slide 36s infinite linear;
 }
 
 .slide {
   width: 100%;
   height: 300px;
-  object-fit: contain;
-  background-color: rgb(146, 88, 0); 
+  object-fit: cover; /* mejor que contain para que no quede espacio */
   flex-shrink: 0;
 }
 
 @keyframes slide {
   0%   { transform: translateX(0); }
-  25%  { transform: translateX(-100%); }
-  50%  { transform: translateX(-200%); }
-  75%  { transform: translateX(-300%); }
-  100% { transform: translateX(0); }
+  100% { transform: translateX(-1100%); } /* (12 - 1) x 100% */
 }
 
 
