@@ -107,8 +107,8 @@ header {
 
 .slider {
   display: flex;
-  width: 1200%;
-  animation: slide 48s ease-in-out infinite;
+  width: 100%; /* Corregido */
+  animation: slide 36s ease-in-out infinite;
 }
 
 .slide {
@@ -120,44 +120,54 @@ header {
 }
 
 @keyframes slide {
+  /* Imagen 1 */
   0%     { transform: translateX(0); }
-  6.5%   { transform: translateX(0); }
-  8.33%  { transform: translateX(-8.3333%); }
+  7%     { transform: translateX(0); }          /* pausa */
+  9%     { transform: translateX(-8.3333%); }   /* mueve a imagen 2 */
 
-  14.83% { transform: translateX(-8.3333%); }
-  16.66% { transform: translateX(-16.6666%); }
+  /* Imagen 2 */
+  16%    { transform: translateX(-8.3333%); }
+  18%    { transform: translateX(-16.6666%); }  /* mueve a imagen 3 */
 
-  23.16% { transform: translateX(-16.6666%); }
-  25%    { transform: translateX(-25%); }
+  /* Imagen 3 */
+  25%    { transform: translateX(-16.6666%); }
+  27%    { transform: translateX(-25%); }       /* mueve a imagen 4 */
 
-  31.5%  { transform: translateX(-25%); }
-  33.33% { transform: translateX(-33.3333%); }
+  /* Imagen 4 */
+  34%    { transform: translateX(-25%); }
+  36%    { transform: translateX(-33.3333%); }  /* mueve a imagen 5 */
 
-  39.83% { transform: translateX(-33.3333%); }
-  41.66% { transform: translateX(-41.6666%); }
+  /* Imagen 5 */
+  43%    { transform: translateX(-33.3333%); }
+  45%    { transform: translateX(-41.6666%); }  /* mueve a imagen 6 */
 
-  48.16% { transform: translateX(-41.6666%); }
-  50%    { transform: translateX(-50%); }
+  /* Imagen 6 */
+  52%    { transform: translateX(-41.6666%); }
+  54%    { transform: translateX(-50%); }       /* mueve a imagen 7 */
 
-  56.5%  { transform: translateX(-50%); }
-  58.33% { transform: translateX(-58.3333%); }
+  /* Imagen 7 */
+  61%    { transform: translateX(-50%); }
+  63%    { transform: translateX(-58.3333%); }  /* mueve a imagen 8 */
 
-  64.83% { transform: translateX(-58.3333%); }
-  66.66% { transform: translateX(-66.6666%); }
+  /* Imagen 8 */
+  70%    { transform: translateX(-58.3333%); }
+  72%    { transform: translateX(-66.6666%); }  /* mueve a imagen 9 */
 
-  73.16% { transform: translateX(-66.6666%); }
-  75%    { transform: translateX(-75%); }
+  /* Imagen 9 */
+  79%    { transform: translateX(-66.6666%); }
+  81%    { transform: translateX(-75%); }       /* mueve a imagen 10 */
 
-  81.5%  { transform: translateX(-75%); }
-  83.33% { transform: translateX(-83.3333%); }
+  /* Imagen 10 */
+  88%    { transform: translateX(-75%); }
+  90%    { transform: translateX(-83.3333%); }  /* mueve a imagen 11 */
 
-  89.83% { transform: translateX(-83.3333%); }
-  91.66% { transform: translateX(-91.6666%); }
+  /* Imagen 11 */
+  97%    { transform: translateX(-83.3333%); }
+  99%    { transform: translateX(-91.6666%); }  /* mueve a imagen 12 */
 
-  98.16% { transform: translateX(-91.6666%); }
+  /* Regresa a inicio */
   100%   { transform: translateX(0); }
 }
-
 
 
 
