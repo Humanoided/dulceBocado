@@ -107,8 +107,8 @@ header {
 
 .slider {
   display: flex;
-  width: 1200%; /* 12 imágenes → 12 x 100% */
-  animation: slide 36s infinite linear;
+  animation: slide 36s linear infinite;
+  width: calc(100% * 12);
 }
 
 .slide {
@@ -120,8 +120,8 @@ header {
 }
 
 @keyframes slide {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-1100%); } /* (12 - 1) x 100% */
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-91.66%); } /* (12 - 1) / 12 = 91.66% */
 }
 
 
