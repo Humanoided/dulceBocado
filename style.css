@@ -630,8 +630,8 @@ button:focus {
 
   .slider {
     display: flex;
-    width: calc(100% * 12);
-    animation: slideMobile 96s steps(12, end) infinite;
+    width: calc(100% * 12); /* 12 imágenes */
+    animation: slideMobile 144s ease-in-out infinite; /* 12s por imagen */
   }
 
   .slide {
@@ -642,7 +642,18 @@ button:focus {
   }
 
   @keyframes slideMobile {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-1100%); }
+    0%, 6.9% { transform: translateX(0%); }
+    8.3%, 15.2% { transform: translateX(-100%); }
+    16.6%, 23.5% { transform: translateX(-200%); }
+    25%, 31.9% { transform: translateX(-300%); }
+    33.3%, 40.2% { transform: translateX(-400%); }
+    41.6%, 48.5% { transform: translateX(-500%); }
+    50%, 56.9% { transform: translateX(-600%); }
+    58.3%, 65.2% { transform: translateX(-700%); }
+    66.6%, 73.5% { transform: translateX(-800%); }
+    75%, 81.9% { transform: translateX(-900%); }
+    83.3%, 90.2% { transform: translateX(-1000%); }
+    91.6%, 100% { transform: translateX(-1100%); }
   }
 }
+
