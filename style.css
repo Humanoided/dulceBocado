@@ -625,8 +625,8 @@ button:focus {
 @media (max-width: 600px) {
   .slider-mobile {
     display: flex;
-    width: 1200%;
-    animation: slideMobile 96s ease-in-out infinite;
+    width: calc(100% * 12); /* 12 imágenes */
+    animation: slideMobile 96s steps(12, end) infinite;
   }
 
   .carrusel {
@@ -635,24 +635,18 @@ button:focus {
   }
 
   .slider-mobile .slide {
-    width: 100%;
+    width: 100vw;
     height: 200px;
     flex-shrink: 0;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   @keyframes slideMobile {
-    0%, 5%     { transform: translateX(0); }
-    10%, 15%   { transform: translateX(-100%); }
-    20%, 25%   { transform: translateX(-200%); }
-    30%, 35%   { transform: translateX(-300%); }
-    40%, 45%   { transform: translateX(-400%); }
-    50%, 55%   { transform: translateX(-500%); }
-    60%, 65%   { transform: translateX(-600%); }
-    70%, 75%   { transform: translateX(-700%); }
-    80%, 85%   { transform: translateX(-800%); }
-    90%, 95%   { transform: translateX(-900%); }
-    96%, 98%   { transform: translateX(-1000%); }
-    99%, 100%  { transform: translateX(-1100%); }
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-1100%);
+    }
   }
 }
