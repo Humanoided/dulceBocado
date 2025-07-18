@@ -634,7 +634,7 @@ button:focus {
   .slider {
     display: flex;
     width: 1200%;
-    animation: slideMobile 60s ease-in-out infinite;
+    animation: slideMobile 100s ease-in-out infinite;
   }
 
   .slide {
