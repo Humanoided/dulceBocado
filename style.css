@@ -625,13 +625,14 @@ button:focus {
 @media (max-width: 600px) {
   .slider-mobile {
     display: flex;
-    width: calc(100% * 12); /* 12 imágenes */
-    animation: slideMobile 96s steps(12, end) infinite;
+    width: calc(100vw * 13); /* 12 imágenes + 1 copia */
+    animation: slideMobile 96s ease-in-out infinite;
   }
 
   .carrusel {
     height: 200px;
     overflow: hidden;
+    position: relative;
   }
 
   .slider-mobile .slide {
@@ -642,11 +643,18 @@ button:focus {
   }
 
   @keyframes slideMobile {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-1100%);
-    }
+    0%    { transform: translateX(0); }
+    8.33% { transform: translateX(-100vw); }
+    16.66%{ transform: translateX(-200vw); }
+    25%   { transform: translateX(-300vw); }
+    33.33%{ transform: translateX(-400vw); }
+    41.66%{ transform: translateX(-500vw); }
+    50%   { transform: translateX(-600vw); }
+    58.33%{ transform: translateX(-700vw); }
+    66.66%{ transform: translateX(-800vw); }
+    75%   { transform: translateX(-900vw); }
+    83.33%{ transform: translateX(-1000vw); }
+    91.66%{ transform: translateX(-1100vw); }
+    100%  { transform: translateX(-1200vw); }
   }
 }
