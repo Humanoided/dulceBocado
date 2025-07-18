@@ -622,8 +622,6 @@ button:focus {
 
 }
 
-
-
 @media (max-width: 600px) {
 
   .carrusel {
@@ -634,7 +632,7 @@ button:focus {
   .slider {
     display: flex;
     width: 1200%;
-    animation: slideMobile 60s ease-in-out infinite;
+    animation: slideMobile 84s steps(1, end) infinite;
   }
 
   .slide {
@@ -645,17 +643,18 @@ button:focus {
   }
 
   @keyframes slideMobile {
-    0%, 6%    { transform: translateX(0%); }
-    8%, 14%   { transform: translateX(-100%); }
-    16%, 22%  { transform: translateX(-200%); }
-    24%, 30%  { transform: translateX(-300%); }
-    32%, 38%  { transform: translateX(-400%); }
-    40%, 46%  { transform: translateX(-500%); }
-    48%, 54%  { transform: translateX(-600%); }
-    56%, 62%  { transform: translateX(-700%); }
-    64%, 70%  { transform: translateX(-800%); }
-    72%, 78%  { transform: translateX(-900%); }
-    80%, 86%  { transform: translateX(-1000%); }
-    88%, 100% { transform: translateX(-1100%); }
+    0%   { transform: translateX(0%); }
+    8.33%  { transform: translateX(-100%); }
+    16.66% { transform: translateX(-200%); }
+    25%    { transform: translateX(-300%); }
+    33.33% { transform: translateX(-400%); }
+    41.66% { transform: translateX(-500%); }
+    50%    { transform: translateX(-600%); }
+    58.33% { transform: translateX(-700%); }
+    66.66% { transform: translateX(-800%); }
+    75%    { transform: translateX(-900%); }
+    83.33% { transform: translateX(-1000%); }
+    91.66% { transform: translateX(-1100%); }
+    100%   { transform: translateX(0); }
   }
 }
