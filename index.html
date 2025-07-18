@@ -57,7 +57,9 @@ Nuestra misión es brindar experiencias únicas a través del sabor, la estétic
 
 
   <section class="carrusel">
-  <div class="slider">
+    <section class="carrusel">
+</section>
+  <div class="slider" id="slider">
     <img src="img/Alfajores.png" class="slide" />
     <img src="img/bandejaNavideña.png" class="slide" />
     <img src="img/cajaSorpresa.png" class="slide" />
@@ -113,5 +115,14 @@ Nuestra misión es brindar experiencias únicas a través del sabor, la estétic
       window.open(url, "_blank");
     }
   </script>
+  <script>
+  const slider = document.getElementById('slider');
+  const isMobile = window.matchMedia("(max-width: 600px)").matches;
+
+  if (isMobile) {
+    slider.classList.remove("slider");
+    slider.classList.add("slider-mobile");
+  }
+</script>
 </body>
 </html>
