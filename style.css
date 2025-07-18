@@ -623,7 +623,6 @@ button:focus {
 }
 
 @media (max-width: 600px) {
-
   .carrusel {
     height: 200px;
     overflow: hidden;
@@ -631,30 +630,30 @@ button:focus {
 
   .slider {
     display: flex;
-    width: 1200%;
-    animation: slideMobile 84s steps(1, end) infinite;
+    width: calc(100vw * 12); /* 12 imágenes, 100vw cada una */
+    animation: slideMobile 84s ease-in-out infinite;
   }
 
   .slide {
-    width: 100%;
+    width: 100vw; /* Cada imagen ocupa el ancho total del viewport */
     height: 200px;
     flex-shrink: 0;
     object-fit: contain;
   }
 
   @keyframes slideMobile {
-    0%   { transform: translateX(0%); }
-    8.33%  { transform: translateX(-100%); }
-    16.66% { transform: translateX(-200%); }
-    25%    { transform: translateX(-300%); }
-    33.33% { transform: translateX(-400%); }
-    41.66% { transform: translateX(-500%); }
-    50%    { transform: translateX(-600%); }
-    58.33% { transform: translateX(-700%); }
-    66.66% { transform: translateX(-800%); }
-    75%    { transform: translateX(-900%); }
-    83.33% { transform: translateX(-1000%); }
-    91.66% { transform: translateX(-1100%); }
-    100%   { transform: translateX(0); }
+    0%    { transform: translateX(0vw); }
+    8.33% { transform: translateX(-100vw); }
+    16.66%{ transform: translateX(-200vw); }
+    25%   { transform: translateX(-300vw); }
+    33.33%{ transform: translateX(-400vw); }
+    41.66%{ transform: translateX(-500vw); }
+    50%   { transform: translateX(-600vw); }
+    58.33%{ transform: translateX(-700vw); }
+    66.66%{ transform: translateX(-800vw); }
+    75%   { transform: translateX(-900vw); }
+    83.33%{ transform: translateX(-1000vw); }
+    91.66%{ transform: translateX(-1100vw); }
+    100%  { transform: translateX(0vw); }
   }
 }
