@@ -82,7 +82,7 @@ header {
 
   color: white;
 
-  display: none; /* oculto en desktop */
+  display: none; 
 
 }
 
@@ -115,9 +115,6 @@ header {
 }
 
 
-
-/* Responsive: Móvil */
-
 @media (max-width: 600px) {
 
   .menu-toggle {
@@ -134,7 +131,7 @@ header {
 
     position: absolute;
 
-    top: 3.5rem; /* justo abajo del navbar */
+    top: 3.5rem; 
 
     right: 0;
 
@@ -161,15 +158,6 @@ header {
     text-align: center;
 
   }
-
-}
-
-
-
-/* ... resto de tu CSS sigue igual ... */
-
-
-
 
 
 .hero {
@@ -214,7 +202,11 @@ header {
 
 .slider {
   display: flex;
+<<<<<<< HEAD
+  width: calc(100% * 12);
+=======
   width: calc(100% * 13); /* ✅ así sí se suman 13 imágenes al 100% cada una */
+>>>>>>> f27e4c794c725bb3c2576ebee0f5006df12cb029
   animation: slide 36s ease-in-out infinite;
 }
 
